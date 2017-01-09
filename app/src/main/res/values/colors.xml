@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Theme -->
+    <color name="colorPrimary">@color/charcoal</color>
+    <color name="colorPrimaryDark">@color/nero</color>
+    <color name="colorAccent">@color/sky</color>
+
+    <!-- Primary colors -->
+    <color name="sky">#42A2D6</color>
+    <color name="tulip">#D6A742</color>
+    <color name="nero">#292929</color>
+    <color name="night_rider">#303030</color>
+    <color name="charcoal">#424242</color>
+</resources>

@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'spoon'
+apply plugin: 'me.tatarka.retrolambda' // make sure to apply last!
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "fr.renaudmathieu.swapi"
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Public libraries
+    Map<String, String> supportDependencies = rootProject.ext.supportDependencies;
+    compile supportDependencies.appcompat
+    compile supportDependencies.recyclerview
+    compile supportDependencies.cardview
+    compile supportDependencies.design
+    compile supportDependencies.annotations
+
+    Map<String, String> retrofitDependencies = rootProject.ext.retrofitDependencies;
+    compile retrofitDependencies.retrofit
+    compile retrofitDependencies.retrofitConverterGson
+    compile retrofitDependencies.retrofitAdapterRxJava
+
+    Map<String, String> rxDependencies = rootProject.ext.rxDependencies;
+    compile rxDependencies.rxJava
+    compile rxDependencies.rxAndroid
+    compile rxDependencies.rxBindingAppCompat
+
+    Map<String, String> daggerDependencies = rootProject.ext.daggerDependencies;
+    apt daggerDependencies.daggerCompiler
+    compile daggerDependencies.dagger
+    provided daggerDependencies.daggerJsr250
+
+    Map<String, String> butterKnifeDependencies = rootProject.ext.butterKnifeDependencies;
+    compile butterKnifeDependencies.butterKnife
+    apt butterKnifeDependencies.butterKnifeCompiler
+
+    Map<String, String> icePickDependencies = rootProject.ext.icePickDependencies;
+    apt icePickDependencies.icePickProcessor
+    compile icePickDependencies.icePick
+
+    Map<String, String> fragmentArgsDependencies = rootProject.ext.fragmentArgsDependencies;
+    apt fragmentArgsDependencies.fragmentArgsProcessor
+    compile fragmentArgsDependencies.fragmentArgsAnnotation
+
+    Map<String, String> stethoDependencies = rootProject.ext.stethoDependencies;
+    compile stethoDependencies.stetho
+    compile stethoDependencies.stethoHttp
+
+    compile rootProject.ext.frescoDependencies.fresco
+    
+    // Testing libraries
+    Map<String, String> testDependencies = rootProject.ext.testDependencies;
+    androidTestCompile supportDependencies.annotations
+    androidTestCompile testDependencies.espresso
+    androidTestCompile testDependencies.espressoIntent
+    androidTestCompile testDependencies.rules
+    androidTestCompile testDependencies.spoon
+    androidTestCompile testDependencies.falconSpoon
+
+    // Dependencies for local unit tests
+    testCompile testDependencies.junit
+    testCompile testDependencies.mockito
+}

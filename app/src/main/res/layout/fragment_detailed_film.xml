@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/night_rider">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/nero"
+        android:drawablePadding="@dimen/padding_m"
+        android:drawableStart="@drawable/ic_movie_white_24dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/padding_m"
+        android:paddingStart="@dimen/padding_m"
+        android:paddingTop="@dimen/padding_m"
+        android:textSize="@dimen/text_xl"
+        tools:text="TEST"/>
+
+    <TextView
+        android:id="@+id/released"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginEnd="@dimen/padding_m"
+        android:layout_marginStart="@dimen/padding_m"
+        android:gravity="end"
+        android:textStyle="bold"
+        tools:text="release"/>
+
+    <TextView
+        android:id="@+id/producer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/released"
+        android:layout_marginStart="@dimen/padding_m"
+        tools:text="producer"/>
+
+    <TextView
+        android:id="@+id/director"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/producer"
+        android:layout_marginStart="@dimen/padding_m"
+        tools:text="director"/>
+
+    <TextView
+        android:id="@+id/opening"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/director"
+        android:layout_marginTop="@dimen/padding_m"
+        android:background="@color/charcoal"
+        android:ellipsize="end"
+        android:maxLines="8"
+        android:padding="@dimen/padding_m"
+        tools:text="opening"/>
+
+    <TextView
+        android:id="@+id/people"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/opening"
+        android:drawablePadding="@dimen/padding_xs"
+        android:drawableStart="@drawable/ic_person_white_24dp"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_m"
+        android:visibility="gone"
+        tools:text="People 1"/>
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/charcoal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/picture"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@android:color/black"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/film_director"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/picture"
+            android:layout_marginEnd="@dimen/padding_s"
+            android:src="@drawable/ic_keyboard_arrow_right_white_24dp"/>
+
+        <TextView
+            android:id="@+id/film_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/picture"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/padding_xs"
+            android:paddingEnd="@dimen/padding_m"
+            android:paddingStart="@dimen/padding_m"
+            android:paddingTop="@dimen/padding_s"
+            android:textSize="@dimen/text_xl"
+            tools:text="Test"/>
+
+        <TextView
+            android:id="@+id/film_director"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/film_name"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/padding_xs"
+            android:paddingEnd="@dimen/padding_m"
+            android:paddingStart="@dimen/padding_m"
+            tools:text="Test"/>
+
+        <TextView
+            android:id="@+id/film_published"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="@dimen/padding_m"
+            tools:text="Test"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

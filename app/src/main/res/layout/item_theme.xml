@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/charcoal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/theme_picture"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@android:color/black"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/theme_name"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/theme_picture"
+            android:layout_marginEnd="@dimen/padding_s"
+            android:src="@drawable/ic_keyboard_arrow_right_white_24dp"/>
+
+        <TextView
+            android:id="@+id/theme_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/theme_picture"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_m"
+            android:textSize="@dimen/text_xl"
+            tools:text="Test"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

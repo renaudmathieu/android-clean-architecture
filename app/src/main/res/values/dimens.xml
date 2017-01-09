@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Padding -->
+    <dimen name="padding_xs">5dp</dimen>
+    <dimen name="padding_s">10dp</dimen>
+    <dimen name="padding_m">15dp</dimen>
+    <dimen name="padding_l">20dp</dimen>
+    <dimen name="padding_xl">30dp</dimen>
+    <dimen name="padding_xxl">40dp</dimen>
+
+    <!-- Text -->
+    <dimen name="text_s">12sp</dimen>
+    <dimen name="text_m">14sp</dimen>
+    <dimen name="text_l">16sp</dimen>
+    <dimen name="text_xl">20sp</dimen>
+    <dimen name="text_xxl">28sp</dimen>
+
+    <!-- Cards -->
+    <dimen name="card_elevation">0dp</dimen>
+
+    <!-- Toolbar -->
+    <dimen name="toolbar_elevation">4dp</dimen>
+
+</resources>

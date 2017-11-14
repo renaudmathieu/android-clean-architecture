@@ -1,11 +1,10 @@
 apply plugin: 'com.android.application'
-apply plugin: 'android-apt'
 apply plugin: 'spoon'
 apply plugin: 'me.tatarka.retrolambda' // make sure to apply last!
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "fr.renaudmathieu.swapi"
         minSdkVersion 17
@@ -44,20 +43,20 @@ dependencies {
     compile rxDependencies.rxBindingAppCompat
 
     Map<String, String> daggerDependencies = rootProject.ext.daggerDependencies;
-    apt daggerDependencies.daggerCompiler
+    annotationProcessor daggerDependencies.daggerCompiler
     compile daggerDependencies.dagger
     provided daggerDependencies.daggerJsr250
 
     Map<String, String> butterKnifeDependencies = rootProject.ext.butterKnifeDependencies;
     compile butterKnifeDependencies.butterKnife
-    apt butterKnifeDependencies.butterKnifeCompiler
+    annotationProcessor butterKnifeDependencies.butterKnifeCompiler
 
     Map<String, String> icePickDependencies = rootProject.ext.icePickDependencies;
-    apt icePickDependencies.icePickProcessor
+    annotationProcessor icePickDependencies.icePickProcessor
     compile icePickDependencies.icePick
 
     Map<String, String> fragmentArgsDependencies = rootProject.ext.fragmentArgsDependencies;
-    apt fragmentArgsDependencies.fragmentArgsProcessor
+    annotationProcessor fragmentArgsDependencies.fragmentArgsProcessor
     compile fragmentArgsDependencies.fragmentArgsAnnotation
 
     Map<String, String> stethoDependencies = rootProject.ext.stethoDependencies;
